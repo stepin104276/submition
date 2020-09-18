@@ -91,8 +91,8 @@ void test_lesser(void) {
 }
 
 void test_andgate(void) {
-  CU_ASSERT(0 == lesser(1, 0));
+  CU_ASSERT(0 == andgate(1, 0));
   
   /* Dummy fail*/
-  CU_ASSERT(2 == lesser(1, 1));
+  CU_ASSERT(2 == andgate(1, 1));
 }
