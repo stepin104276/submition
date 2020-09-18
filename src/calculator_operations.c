@@ -1,8 +1,10 @@
 #include <calculator_operations.h>
+int sum;
 
 int add(int operand1, int operand2)
 {
-    return operand1 + operand2;
+    sum = operand1 + operand2;
+    return sum;
 }
 
 int subtract(int operand1, int operand2)
