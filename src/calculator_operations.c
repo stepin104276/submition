@@ -62,11 +62,11 @@ int lesser(int operand1, int operand2)
 int andgate(int operand1, int operand2)
 {
     int result;
-    if(oparand1 < 0 || operand2 < 0)
+    if(operand1 < 0 || operand2 < 0)
     {
         return -1;
     }
-    else if (oparand1 > 1 || operand2 > 1)
+    else if (operand1 > 1 || operand2 > 1)
     {
         return 1;
     }
