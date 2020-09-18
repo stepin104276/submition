@@ -10,6 +10,7 @@ unsigned int calculator_operation = 0;
 /* Operands on which calculation is performed */
 int calculator_operand1 = 0;
 int calculator_operand2 = 0;
+int calculator_operand3 = 0;
 
 /* Valid operations */
 enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER, ANDGATE, ORGATE, NANDGATE, NORGATE, ADDER3BIT, SUBTRACTOR3BIT, EXIT };
@@ -125,7 +126,7 @@ void calculator_menu(void)
             getchar();
             break;
           case ORGATE:
-            printf("\n\Orgate %d and %d = %d\nEnter to continue", 
+            printf("\n\tOrgate %d and %d = %d\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             orgate(calculator_operand1, calculator_operand2));
