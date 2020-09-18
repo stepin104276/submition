@@ -90,7 +90,7 @@ void test_lesser(void) {
   CU_ASSERT(2 == lesser(2, 20));
 }
 
-void test_lesser(void) {
+void test_andgate(void) {
   CU_ASSERT(0 == lesser(1, 0));
   
   /* Dummy fail*/
