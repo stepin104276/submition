@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER, ANDGATE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, LESSER, ANDGATE, ORGATE, NANDGATE, NORGATE, ADDER3BIT, SUBTRACTOR3BIT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Lesser\n7. Andgate\n8. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Lesser\n7. Andgate\n8. Orgate\n9. Nandgate\n10. Norgate\n11. Adder3bit\n12. subtractor3bit\n13. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -124,7 +124,54 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 8:
+          case ORGATE:
+            printf("\n\Orgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            orgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case NANDGATE:
+            printf("\n\tNandgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            nandgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case NORGATE:
+            printf("\n\tNorgate %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            norgate(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case ADDER3BIT:
+            printf("\n\tAdder3bit %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3,
+            adder3bit(calculator_operand1, calculator_operand2, calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+          case SUBTRACTOR3BIT:
+            printf("\n\tSubtractor3bit %d and %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3,
+            subtractor3bit(calculator_operand1, calculator_operand2, calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case 13:
             exit(0);
             break;
         default:
