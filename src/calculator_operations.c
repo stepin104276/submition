@@ -10,14 +10,14 @@ int add(int operand1, int operand2)
 int subtract(int operand1, int operand2)
 {
     int sum;
-    sum = operand1 - operand2
+    sum = operand1 - operand2;
     return sum;
 }
 
 int multiply(int operand1, int operand2)
 {
     int result;
-    result = operand1 * operand2
+    result = operand1 * operand2;
     return result;
 }
 
@@ -30,7 +30,7 @@ int divide(int operand1, int operand2)
     }
     else
     {
-        result = operand1 / operand2
+        result = operand1 / operand2;
         return result;
     }
 }
