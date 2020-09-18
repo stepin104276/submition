@@ -78,3 +78,10 @@ void test_greater(void) {
   /* Dummy fail*/
   CU_ASSERT(2 == greater(2, 20));
 }
+
+void test_lesser(void) {
+  CU_ASSERT(10 == lesser(10, 20));
+  
+  /* Dummy fail*/
+  CU_ASSERT(2 == lesser(2, 20));
+}
