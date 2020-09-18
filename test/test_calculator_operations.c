@@ -108,36 +108,36 @@ void test_andgate(void) {
 }
 
 void test_orgate(void) {
-  CU_ASSERT(0 == andgate(1, 0));
+  CU_ASSERT(0 == orgate(1, 0));
   
   /* Dummy fail*/
-  CU_ASSERT(2 == andgate(1, 1));
+  CU_ASSERT(2 == orgate(1, 1));
 }
 
 void test_nandgate(void) {
-  CU_ASSERT(0 == andgate(1, 0));
+  CU_ASSERT(0 == nandgate(1, 0));
   
   /* Dummy fail*/
-  CU_ASSERT(-5 == andgate(1, 1));
+  CU_ASSERT(-5 == nandgate(1, 1));
 }
 
 void test_norgate(void) {
-  CU_ASSERT(0 == andgate(1, 0));
+  CU_ASSERT(0 == norgate(1, 0));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == andgate(1, 1));
+  CU_ASSERT(1 == norgate(1, 1));
 }
 
 void test_adder3bit(void) {
-  CU_ASSERT(0 == andgate(1, 0, 1));
+  CU_ASSERT(0 == adder3bit(1, 0, 1));
   
   /* Dummy fail*/
-  CU_ASSERT(0 == andgate(1, 1, 1));
+  CU_ASSERT(0 == adder3bit(1, 1, 1));
 }
 
 void test_subtractor3bit(void) {
-  CU_ASSERT(1 == andgate(0, 0, 1));
+  CU_ASSERT(1 == subtractor3bit(0, 0, 1));
   
   /* Dummy fail*/
-  CU_ASSERT(0 == andgate(1, 1, 1));
+  CU_ASSERT(0 == subtractor3bit(1, 1, 1));
 }
